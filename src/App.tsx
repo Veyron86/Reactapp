@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Animall } from './Animal';
+
+const animals = [{name: 'kot'}, 
+{name: 'pies'}, 
+{name: 'kura'}, 
+{name: 'dzik', image: "https://zasoby.ekologia.pl/artykulyNew/20189/xxl/shutterstock-1047316639_800x600.jpg"}, 
+{name: 'koń'}, 
+{name: 'owieczka'}, 
+{name: 'delfin'}, 
+{name: 'sarna', image: "https://knieja.kylos.pl/wp-content/uploads/2015/05/sarna.jpg"}, 
+{name: 'zając', image: "https://cdn.pixabay.com/photo/2016/12/13/00/13/rabbit-1903016_960_720.jpg"}, 
+]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  //   <div>
+  // {animals.map(animal => 
+  // <div>
+  //     <h1>{animal.name}</h1>
+  //     <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+  //     <img src="https://www.thesprucepets.com/thmb/APYdMl_MTqwODmH4dDqaY5q0UoE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/all-about-tabby-cats-552489-hero-a23a9118af8c477b914a0a1570d4f787.jpg" />
+  //   </div>)}
+  //     Drugi sposób:
+  //     {animals.map(animal => <Animal name={animal.name}></Animal>)}
+  //   </div>
+  <div>
+      {animals.map(animal => <Animall name={animal.name}></Animall>)}
+  </div>
+  
   );
 }
 
